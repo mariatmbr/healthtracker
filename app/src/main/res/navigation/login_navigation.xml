@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/logoFragment">
+
+    <fragment
+        android:id="@+id/logoFragment"
+        android:name="com.example.healthtracker.ui.login.LogoFragment"
+        android:label="LogoFragment" >
+        <action
+            android:id="@+id/action_logoFragment_to_slideFragment"
+            app:destination="@id/slideFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/slideFragment"
+        android:name="com.example.healthtracker.ui.login.SlideFragment"
+        android:label="SlideFragment" >
+        <action
+            android:id="@+id/action_slideFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.healthtracker.ui.login.LoginFragment"
+        android:label="LoginFragment" />
+</navigation>

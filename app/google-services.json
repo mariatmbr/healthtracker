@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "915480512864",
+    "project_id": "healthtrack-86097",
+    "storage_bucket": "healthtrack-86097.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915480512864:android:eebf9d482c465abdcdf605",
+        "android_client_info": {
+          "package_name": "com.example.healthtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915480512864-k61af1jqjohu87mt0dkprnm06l6duvj1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.healthtracker",
+            "certificate_hash": "0f4bcad70b05872715880e4d4993ff22d42d6168"
+          }
+        },
+        {
+          "client_id": "915480512864-mbdf7dl5s965vlv5bjh4ebolr6ff0ode.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgiUcykOkmyZ-X-9_HZqCkPCrreoAVa60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915480512864-mbdf7dl5s965vlv5bjh4ebolr6ff0ode.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
