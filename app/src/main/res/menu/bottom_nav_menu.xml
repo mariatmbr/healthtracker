@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_sport_news"
-        android:icon="@drawable/sports_news"
-        android:title="@string/title_sport_news" />
-
-    <item
-        android:id="@+id/navigation_recipes"
         android:icon="@drawable/recipes2"
         android:title="@string/title_recipes" />
 
     <item
+        android:id="@+id/navigation_savedIdeas"
+        android:icon="@drawable/saved"
+        android:title="@string/title_savedIdeas" />
+
+    <item
         android:id="@+id/navigation_tasks"
-        android:icon="@drawable/tasks"
-        android:title="@string/title_tasks" />
+        android:icon="@drawable/timer"
+        android:title="@string/title_timer" />
 
 </menu>

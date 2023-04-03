@@ -1,4 +1,4 @@
-package com.example.healthtracker.ui.main.sportnews
+package com.example.healthtracker.ui.main.savedIdeas
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.healthtracker.databinding.FragmentSportNewsBinding
+import com.example.healthtracker.databinding.FragmentSavedIdeasBinding
 
-class SportNewsFragment : Fragment() {
+class SavedIdeasFragment : Fragment() {
 
-    private var _binding: FragmentSportNewsBinding? = null
+    private var _binding: FragmentSavedIdeasBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,16 +22,14 @@ class SportNewsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val sportNewsViewModel =
-            ViewModelProvider(this).get(SportNewsViewModel::class.java)
+        val dashboardViewModel =
+            ViewModelProvider(this).get(SavedIdeasViewModel::class.java)
 
-        _binding = FragmentSportNewsBinding.inflate(inflater, container, false)
+        _binding = FragmentSavedIdeasBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSportNews
-        sportNewsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        val textView: TextView = binding.textSavedIdeas
+
         return root
     }
 

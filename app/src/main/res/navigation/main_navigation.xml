@@ -7,16 +7,16 @@
 
     <fragment
         android:id="@+id/navigation_sport_news"
-        android:name="com.example.healthtracker.ui.main.sportnews.SportNewsFragment"
-        tools:layout="@layout/fragment_sport_news" />
+        android:name="com.example.healthtracker.ui.main.recipes.RecipesFragment"
+        tools:layout="@layout/fragment_saved_ideas" />
 
     <fragment
-        android:id="@+id/navigation_recipes"
-        android:name="com.example.healthtracker.ui.main.recipes.RecipesFragment"
-        tools:layout="@layout/fragment_recipes" />
+        android:id="@+id/navigation_savedIdeas"
+        android:name="com.example.healthtracker.ui.main.savedIdeas.SavedIdeasFragment"
+        tools:layout="@layout/fragment_savedIdeas" />
 
     <fragment
         android:id="@+id/navigation_tasks"
-        android:name="com.example.healthtracker.ui.main.tasks.TasksFragment"
-        tools:layout="@layout/fragment_tasks" />
+        android:name="com.example.healthtracker.ui.main.timer.TimerFragment"
+        tools:layout="@layout/fragment_timer" />
 </navigation>

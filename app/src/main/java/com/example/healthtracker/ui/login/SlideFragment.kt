@@ -31,7 +31,7 @@ class SlideFragment : Fragment() {
                 }
                 3 -> {
                     binding.imageView.setImageResource(R.drawable.slide3)
-                    binding.slideText.text = "To get the sleep that you need?"
+                    binding.slideText.text = "To avoid the recipes that you don't need?"
                 }
                 4 -> {
                     binding.imageView.setImageResource(R.drawable.slide4)

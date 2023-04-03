@@ -9,6 +9,5 @@ class RecipesViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
         value = "This is Recipes Fragment"
     }
-
     val text: LiveData<String> = _text
 }
