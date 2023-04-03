@@ -13,7 +13,7 @@
     <fragment
         android:id="@+id/navigation_savedIdeas"
         android:name="com.example.healthtracker.ui.main.savedIdeas.SavedIdeasFragment"
-        tools:layout="@layout/fragment_savedIdeas" />
+        tools:layout="@layout/fragment_saved_ideas" />
 
     <fragment
         android:id="@+id/navigation_tasks"
