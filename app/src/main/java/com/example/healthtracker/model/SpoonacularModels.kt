@@ -7,3 +7,7 @@ data class Recipe(
     val sourceUrl: String,
     val image: String,
 )
+
+data class Recipes(
+    val results: List<Recipe>,
+)

@@ -1,42 +1,51 @@
 package com.example.healthtracker.ui.main.recipes
 
+import RecipesListAdapter
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.SearchView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.healthtracker.databinding.FragmentRecipesBinding
 
 class RecipesFragment : Fragment() {
-
-    private var _binding: FragmentRecipesBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    val viewModel by viewModels<RecipesViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val recipesViewModel =
-            ViewModelProvider(this).get(RecipesViewModel::class.java)
+        val recipesListAdapter = RecipesListAdapter(emptyList());
 
-        _binding = FragmentRecipesBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textSportNews
-        recipesViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        viewModel.recipes.observe(requireActivity()) {
+            recipesListAdapter.setRecipes(it)
         }
-        return root
+
+        val binding = FragmentRecipesBinding.inflate(inflater, container, false)
+        binding.recyclerView.adapter = recipesListAdapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextChange(text: String?): Boolean {
+                return true
+            }
+
+            override fun onQueryTextSubmit(text: String?): Boolean {
+                viewModel.getRecipes(text ?: "")
+                return true
+            }
+        })
+
+        return binding.root;
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.getRecipes("");
     }
 }
+
